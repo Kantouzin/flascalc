@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "415dfdcb118dd9bdfef17671cb7dcd78dbd69b6ae7d4f39e8b44e71d60ca72e7"
+            "sha256": "a6cc826abbad4a1d572d7bb00102508b9d3686266c1c96fca242fe2bd67e6e01"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,6 +15,15 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "tatsu": {
+            "hashes": [
+                "sha256:80713413473a009f2081148d0f494884cabaf9d6866b71f2a68a92b6442f343d",
+                "sha256:c9211eeee9a2d4c90f69879ec0b518b1aa0d9450249cb0dd181f5f5b18be0a92"
+            ],
+            "index": "pypi",
+            "version": "==4.4.0"
+        }
+    },
     "develop": {}
 }

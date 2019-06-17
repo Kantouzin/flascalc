@@ -1,0 +1,70 @@
+@@grammar::ARITH
+
+start 
+    = expression $
+    ;
+
+expression
+    =
+    | addition
+    | subtraction
+    | term
+    ;
+
+addition
+    = left:expression "+" ~ right:term
+    ;
+
+subtraction
+    = left:expression "-" ~ right:term
+    ;
+
+term
+    =
+    | multiplication
+    | division
+    | factor
+    ;
+
+multiplication
+    = left:term "*" ~ right:factor
+    ;
+
+division
+    = left:term "/" ~ right:factor
+    ;
+
+factor
+    =
+    | unary_positive
+    | unary_negative
+    | power_expression
+    ;
+
+unary_positive
+    = "+" exp:factor
+    ;
+
+unary_negative
+    = "-" exp:factor
+    ;
+
+power_expression
+    = power
+    | atom
+    ;
+
+power
+    = left:atom "**" ~ right:factor
+    ;
+
+atom
+    =
+    | "(" ~ @:expression ")"
+    | number
+    ;
+
+number
+    =
+    /\d+/
+    ;
